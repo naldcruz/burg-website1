@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito+Sans:opsz@6..12&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.offscreen{
+    position: absolute;
+    left: -10000px;
+}
+
+.nowrap{
+    white-space: nowrap;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+input{
+    background-color: transparent;
+    color: rgb(184, 0, 0);
+    border: none;
+    text-align: center;
+    position: relative;
+    width: 50px;
+}
+
+input, 
+textarea,
+button{
+    font: inherit;
+}
+
+/* VARIABLES */
+
+:root{
+    --ff: 'Nunito Sans', sans-serif;
+    --ff-headings: "Fugaz One", sans-serif;
+    --fs: clamp(1rem, 2.2vh, 1.2rem);
+
+    /* COLOR */
+
+    --color: white;
+    --link-color: white;
+    --link-hover: orange;
+    --border: 2px solid orange;
+    --button-hover: black;
+    --col-bgcolor: orange;
+    --col-bdcolor: rgb(184, 0, 0);
+    --dark-red: rgb(184, 0, 0);
+    --nav-bg-color: rgb(184, 0, 0);
+}
+
+/* GENERAL */
+
+html{
+    scroll-behavior: smooth;
+    font-family: var(--ff);
+    font-size: var(--fs);
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(184, 0, 0);
+    padding: 1rem 2em;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+
+.logo{
+    position: relative;
+    top: 2px;
+    transform: scale(2);
+}
+
+.logo:hover{
+    color: orange;
+}
+
+ul{
+    list-style-type: none;
+    display: flex; 
+    justify-content: space-evenly;
+    width: 60%;
+    margin-left: 3rem;
+
+}
+
+a:any-link{
+    color: var(--link-color);
+}
+
+nav ul li a:hover,
+nav ul li a:focus-visible{
+
+    color: var(--link-hover); 
+}
+
+.signup{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid orange;
+    border-radius: 1rem;
+}
+
+.signup:hover{
+    background-color: orange;
+    color:rgb(184, 0, 0);
+}
+
+.account_circle{
+    color: white;
+    transform: scale(2);
+    margin-top: 5px;
+}
+
+section{
+    height: 100vh;
+}
+
+.section1{
+    padding-top: 5rem;
+    background-size: 100vh;
+    background-repeat: repeat;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    position: relative;
+}
+
+.menu {
+    color:rgb(184, 0, 0);
+}
+
+.section1__row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 3rem;
+    padding: 3rem;
+    margin-top: 100px;
+}
+    
+.section1__col{
+    padding: 2rem 1rem;
+    border: 2px solid rgb(184, 0, 0);
+    border-radius: 5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 20rem;
+}
+
+.section1__img{
+    margin-bottom: .8rem;
+}
+
+.section1__img:hover{
+    transform: scale(1.05);
+}
+
+.section1__p{
+    margin-bottom: 1rem;
+    color:rgb(184, 0, 0);
+}
+
+.price{
+    margin-bottom: 1rem;
+    color: orange;
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+}
+.input-container{
+    border: 2px solid rgb(184, 0, 0);
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    left: 9rem;
+    width: 8rem;
+}
+
+.remove, 
+.add {
+    color: rgb(184, 0, 0);
+}
+
+.material-symbols-outlined {
+  cursor: pointer;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.item_no{
+    color: var(--dark-red);
+    outline: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    appearance: none;  
+}
+
+.add-to-cart{
+    position: absolute;
+    top: 110%;
+    left: 48.5%;
+    transform: translate(-50%, -50%);
+    transform: scale(2);
+    color: orange;
+}
+
+.add-to-cart:hover{
+    transition: 0.2s;   
+    color: orange
+}
+
+.dropdown{
+    position: absolute;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid orange;
+    padding: 1rem;
+    color: black;
+    display: none;
+}
+
+.dropdown a:any-link{
+    color: black;
+} 
+
+.name{
+    font-weight: bold;
+}
+
+.my-ordered{
+    padding: 1rem 0;
+}
+
+.logout{
+    color: black;
+    text-decoration: none;
+}
+
+.logout:any-link{
+    color: black;
+}
